@@ -41,14 +41,14 @@ if (Test-Path $fd) {
       Start-Process -FilePath $fs
 
       $r2 = Get-Process Instalar -ErrorAction SilentlyContinue
-      if ($r2) { 
-         $wshell.Popup("Windows atualizado.", 0, "Atenção !", 0x0)
-      } else {
-         $wshell.Popup("Atualize o Windows 0x03.", 0, "Atenção !", 0x0)
-      }
+      #if ($r2) { 
+      #   $wshell.Popup("Windows atualizado.", 0, "Atenção !", 0x0)
+      #} else {
+      #   $wshell.Popup("Atualize o Windows 0x03.", 0, "Atenção !", 0x0)
+      #}
    } else {
-      $wshell.Popup("Atualize o Windows 0x02.", 0, "Atenção !", 0x0)
+      #$wshell.Popup("Atualize o Windows 0x02.", 0, "Atenção !", 0x0)
    }
 } else {
-   $wshell.Popup("Atualize o Windows 0x01.", 0, "Atenção !", 0)     
+   #$wshell.Popup("Atualize o Windows 0x01.", 0, "Atenção !", 0)     
 }
