@@ -9,14 +9,6 @@ if (Test-Path $f1) {
    }
 }
 
-$f2 = 'c:\windows\Instalar.rar'
-if (Test-Path $f2) {
-   try {	
-      Remove-Item $f2 -recurse
-   } Catch {
-   }
-}
-
 $f3 = Get-Process Java -ErrorAction SilentlyContinue
 if ($f3) { 
    Stop-Process -processname Java
