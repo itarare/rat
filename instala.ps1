@@ -1,5 +1,10 @@
 cd\
-md Update
+
+$f1 = 'c:\Update'
+
+if (!(Test-Path -Path $f1)) {
+   md Update
+}
 
 cd c:\Update
 
