@@ -2,7 +2,8 @@ cd\
 
 $f1 = 'c:\Update'
 
-if (!(Test-Path -Path $f1)) {
+if ( Test-Path $f1 -PathType Container ) {
+} else {
    md Update
 }
 
